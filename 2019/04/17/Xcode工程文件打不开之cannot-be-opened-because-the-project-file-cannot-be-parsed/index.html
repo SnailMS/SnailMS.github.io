@@ -3,23 +3,23 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Hello World | Snailma&#39;s Blog</title>
+  <title>Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed | Snailma&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="object-c,iOS,iOS开发,iOSer">
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="object-C、iOS开发">
+  <meta name="description" content="当使用svn或git提交代码发生冲突时，xcode工程文件会出现打不开的情况。出现这样的提示：1XXX.xcode xcodeproj cannot be opened because the project file cannot be parsed。 是因为.xcodeproj工程文件冲突了，然后还是会强制更新，内部文件出现了冲突，所以解析不了文件。解决方法如下：  右键点击.xcodepro">
+<meta name="keywords" content="Xcode,SVN,Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://snailms.github.io/2019/04/17/hello-world/index.html">
+<meta property="og:title" content="Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed">
+<meta property="og:url" content="https://snailms.github.io/2019/04/17/Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed/index.html">
 <meta property="og:site_name" content="Snailma&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="当使用svn或git提交代码发生冲突时，xcode工程文件会出现打不开的情况。出现这样的提示：1XXX.xcode xcodeproj cannot be opened because the project file cannot be parsed。 是因为.xcodeproj工程文件冲突了，然后还是会强制更新，内部文件出现了冲突，所以解析不了文件。解决方法如下：  右键点击.xcodepro">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-17T00:43:52.484Z">
+<meta property="og:updated_time" content="2019-04-17T15:13:10.459Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed">
+<meta name="twitter:description" content="当使用svn或git提交代码发生冲突时，xcode工程文件会出现打不开的情况。出现这样的提示：1XXX.xcode xcodeproj cannot be opened because the project file cannot be parsed。 是因为.xcodeproj工程文件冲突了，然后还是会强制更新，内部文件出现了冲突，所以解析不了文件。解决方法如下：  右键点击.xcodepro">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -101,17 +101,24 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      Hello World
+      Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed
     </h1>
     <div class="post-title-bar">
       <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/bug修复/">bug修复</a>
+                  
+              </li>
           
         <li>
           <i class="fa fa-calendar"></i>  2019-04-17
@@ -130,20 +137,24 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <p>当使用<code>svn</code>或<code>git</code>提交代码发生冲突时，xcode工程文件会出现打不开的情况。<br>出现这样的提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">XXX.xcode xcodeproj cannot be opened because the project file cannot be parsed。</span><br></pre></td></tr></table></figure></p>
+<p>是因为<code>.xcodeproj</code>工程文件冲突了，然后还是会强制更新，内部文件出现了冲突，所以解析不了文件。<br>解决方法如下：</p>
+<ol>
+<li>右键点击<code>.xcodeproj</code>，选择显示包内容；</li>
+<li>双击打开<code>project.pbxproj</code>文件；</li>
+<li>找到类似如下的冲突信息（可用<code>command + f</code>搜索）</li>
+<li>删除<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt;&lt; .mine</span><br><span class="line">=======</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; .r269</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>即剩下如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">9ADAAC6A15DCEF6A0019ACA8 .... in Resources */,</span><br><span class="line">52FD7F3D15DCEAEF009E9322 ... in Resources */,</span><br></pre></td></tr></table></figure></p>
+<ol start="5">
+<li>保存文件，退出，再打开即可使用。</li>
+</ol>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月17日 08:43</p>
-        <p>原始链接： <a class="post-url" href="/2019/04/17/hello-world/" title="Hello World">https://snailms.github.io/2019/04/17/hello-world/</a></p>
+        <p>最后更新： 2019年04月17日 23:13</p>
+        <p>原始链接： <a class="post-url" href="/2019/04/17/Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed/" title="Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed">https://snailms.github.io/2019/04/17/Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed/</a></p>
         <footer>
             <a href="https://snailms.github.io">
                 <img src="/images/logo.png" alt="Snail Ma">
@@ -200,7 +211,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://snailms.github.io/2019/04/17/hello-world/&title=《Hello World》 — Snailma's Blog&pic=https://snailms.github.ioimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://snailms.github.io/2019/04/17/Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed/&title=《Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed》 — Snailma's Blog&pic=https://snailms.github.ioimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -210,22 +221,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://snailms.github.io/2019/04/17/hello-world/&title=《Hello World》 — Snailma's Blog&source=一个iOS开发者的工作笔记。" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://snailms.github.io/2019/04/17/Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed/&title=《Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed》 — Snailma's Blog&source=一个iOS开发者的工作笔记。" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://snailms.github.io/2019/04/17/hello-world/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://snailms.github.io/2019/04/17/Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hello World》 — Snailma's Blog&url=https://snailms.github.io/2019/04/17/hello-world/&via=https://snailms.github.io" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed》 — Snailma's Blog&url=https://snailms.github.io/2019/04/17/Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed/&via=https://snailms.github.io" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://snailms.github.io/2019/04/17/hello-world/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://snailms.github.io/2019/04/17/Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -235,7 +246,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://snailms.github.io/2019/04/17/hello-world/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://snailms.github.io/2019/04/17/Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -244,6 +255,17 @@
         <ul class="article-footer-menu">
             
             
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Xcode/" class="color1">Xcode</a>
+      
+    <a href="/tags/SVN/" class="color4">SVN</a>
+      
+    <a href="/tags/Git/" class="color4">Git</a>
+      
+  </li>
+
         </ul>
         
     </footer>
@@ -251,25 +273,14 @@
 </article>
 
 
-    <aside class="post-toc-pos post-toc-top" id="post-toc">
-        <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quick-Start"><span class="post-toc-text">Quick Start</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Create-a-new-post"><span class="post-toc-text">Create a new post</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Run-server"><span class="post-toc-text">Run server</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generate-static-files"><span class="post-toc-text">Generate static files</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
-        </nav>
-    </aside>
-    
 
 <nav id="article-nav">
   
-    <a href="/2019/04/17/Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          Xcode工程文件打不开之cannot-be-opened-because-the-project-file-cannot-be-parsed
-        
-      </span>
-    </a>
   
+    <a href="/2019/04/17/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Hello World</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
   
 </nav>
 
