@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Snailma&#39;s Blog</title>
+  
+  <subtitle>iOSer。bug终结者</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://snailms.github.io/"/>
+  <updated>2019-04-23T04:30:22.128Z</updated>
+  <id>https://snailms.github.io/</id>
+  
+  <author>
+    <name>Snail Ma</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac-LaunchPad上有图标，但是应用程序中没有如何删除</title>
+    <link href="https://snailms.github.io/2019/04/23/Mac-LaunchPad%E4%B8%8A%E6%9C%89%E5%9B%BE%E6%A0%87%EF%BC%8C%E4%BD%86%E6%98%AF%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%B2%A1%E6%9C%89%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4/"/>
+    <id>https://snailms.github.io/2019/04/23/Mac-LaunchPad上有图标，但是应用程序中没有如何删除/</id>
+    <published>2019-04-23T04:24:48.000Z</published>
+    <updated>2019-04-23T04:30:22.128Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="在launchpad界面：Mac如何删除launchpad里残留但是应用程序里没有的程序，可以参考以下几种方案基本上可以删除掉Mac-launchPad中各种形式的应用"><a href="#在launchpad界面：Mac如何删除launchpad里残留但是应用程序里没有的程序，可以参考以下几种方案基本上可以删除掉Mac-launchPad中各种形式的应用" class="headerlink" title="在launchpad界面：Mac如何删除launchpad里残留但是应用程序里没有的程序，可以参考以下几种方案基本上可以删除掉Mac launchPad中各种形式的应用"></a>在launchpad界面：Mac如何删除launchpad里残留但是应用程序里没有的程序，可以参考以下几种方案基本上可以删除掉Mac launchPad中各种形式的应用</h5><ul><li><p>按住option键（或长按图标）出现抖动，如图标左上角有删除标识，点击就可以删除，如没有删除标识，请参考下面办法</p></li><li><p>Finder中找到Applications文件夹（默认左边快捷已提供），选中需要删除的应用，右键菜单中选择删除。如没有找到需要删除的应用，请参考下面办法。</p></li><li><p>呼出Spotlight（ctrl+space），搜索需要删除的应用名字，在结果最下面选择“在finder中显示”，在打开的finder列表中把应用拖到垃圾桶删除，注意删除目标在搜索结果中类型是“应用”。如没有找到需要删除的应用，请参考下面办法。</p></li><li><p>如果出现了 LaunchPad 的故障或者无法修复的问题, 就可以通过重建LaunchPad内的图标来解决。方法如下:<br>打开应用程序-&gt;实用工具-&gt;终端。以此出入如下字符</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.dock ResetLaunchPad -bool true</span><br><span class="line">killall Dock</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h5 id=&quot;在launchpad界面：Mac如何删除launchpad里残留但是应用程序里没有的程序，可以参考以下几种方案基本上可以删除掉Mac-launchPad中各种形式的应用&quot;&gt;&lt;a href=&quot;#在launchpad界面：Mac如何删除launchpad里残留但是应用
+      
+    
+    </summary>
+    
+      <category term="小技巧" scheme="https://snailms.github.io/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="Mac" scheme="https://snailms.github.io/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac安装Command Line Tools</title>
+    <link href="https://snailms.github.io/2019/04/21/Mac%E5%AE%89%E8%A3%85Command-Line-Tools/"/>
+    <id>https://snailms.github.io/2019/04/21/Mac安装Command-Line-Tools/</id>
+    <published>2019-04-21T09:49:08.000Z</published>
+    <updated>2019-04-21T10:02:55.473Z</updated>
+    
+    <content type="html"><![CDATA[<p>从App Store上下载的Xcode，默认是不会安装Command Line Tools的，Command Line Tools是在Xcode中的一款工具，可以在命令行中运行C程序。<br>在终端中输入命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure></p><p>会弹出提示框，安装<br><img src="/images/Mac安装Command-Line-Tools/图1.png" alt="图1.png"><br>选择同意协议<br><img src="/images/Mac安装Command-Line-Tools/图2.png" alt="图2.png"></p><p>安装中<br><img src="/images/Mac安装Command-Line-Tools/图3.png" alt="图3.png"></p><p>安装完成后，在终端中执行<code>gcc -v</code>命令查看是否安装成功。<br>如果显示如下内容，则按照成功。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/c++/4.2.1</span><br><span class="line">Apple LLVM version 10.0.1 (clang-1001.0.46.3)</span><br><span class="line">Target: x86_64-apple-darwin18.5.0</span><br><span class="line">Thread model: posix</span><br><span class="line">InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin</span><br></pre></td></tr></table></figure></p><blockquote><p><a href="http://railsapps.github.io/xcode-command-line-tools.html" target="_blank" rel="noopener">参考地址</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;从App Store上下载的Xcode，默认是不会安装Command Line Tools的，Command Line Tools是在Xcode中的一款工具，可以在命令行中运行C程序。&lt;br&gt;在终端中输入命令&lt;br&gt;&lt;figure class=&quot;highlight plai
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://snailms.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Xcode" scheme="https://snailms.github.io/tags/Xcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac+Hexo+GitHub博客搭建教程</title>
+    <link href="https://snailms.github.io/2019/04/21/Mac-Hexo-GitHub%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"/>
+    <id>https://snailms.github.io/2019/04/21/Mac-Hexo-GitHub博客搭建教程/</id>
+    <published>2019-04-21T09:22:23.000Z</published>
+    <updated>2019-04-21T09:46:27.507Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="博客本地环境搭建"><a href="#博客本地环境搭建" class="headerlink" title="博客本地环境搭建"></a>博客本地环境搭建</h1><h3 id="1-安装Node-js和Git"><a href="#1-安装Node-js和Git" class="headerlink" title="1.安装Node.js和Git"></a>1.安装Node.js和Git</h3><p>Mac上安装可以选择图形化方式和终端安装，此处直接使用客户端方式安装。<code>Node.js</code>官网下载文件，根据提示安装即可，安装成功后在目录<code>/usr/local/bin</code>目录下。<br>测试<code>Node.js</code>和<code>npm</code>，出现下述信息则安装成功。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">v8.10.0</span><br><span class="line">npm -v</span><br><span class="line">5.6.0</span><br></pre></td></tr></table></figure><p>Git官网下载相应文件根据提示直接进行安装，检查git是否安装成功，直接查看git版本。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git --version </span><br><span class="line">git version 2.15.0</span><br></pre></td></tr></table></figure><h3 id="2-安装Hexo"><a href="#2-安装Hexo" class="headerlink" title="2.安装Hexo"></a>2.安装Hexo</h3><p><code>Node.js</code>和<code>Git</code>都安装成功后开始安装Hexo。安装时注意权限问题，加上<code>sudo</code>，其中<code>-g</code>表示全局安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure></p><h3 id="3-博客初始化"><a href="#3-博客初始化" class="headerlink" title="3.博客初始化"></a>3.博客初始化</h3><p>创建存储博客的文件，比如命名为<code>blog</code>，然后进入到<code>blog</code>之中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure></p><p>执行下述命令初始化本地博客，下载一系列文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></p><p>执行下述命令安装<code>npm</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install</span><br></pre></td></tr></table></figure></p><p>执行下述命令生成本地网页文件并开启服务器，然后通过<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>查看本地博客。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></p><p><img src="/images/Mac-Hexo-GitHub博客搭建教程图1.png" alt="Mac-Hexo-GitHub博客搭建教程图1.png"></p><h3 id="4-本地博客关联GitHub"><a href="#4-本地博客关联GitHub" class="headerlink" title="4.本地博客关联GitHub"></a>4.本地博客关联GitHub</h3><h4 id="4-1本地博客代码上传GitHub"><a href="#4-1本地博客代码上传GitHub" class="headerlink" title="4.1本地博客代码上传GitHub"></a>4.1本地博客代码上传GitHub</h4><p>注册并登陆<code>GitHub</code>账号后，新建仓库，名称必须为<code>user.github.io</code>，如<a href="https://snailms.github.io">snailms.github.io</a>。</p><p><img src="/images/Mac-Hexo-GitHub博客搭建教程图2.png" alt="Mac-Hexo-GitHub博客搭建教程图2.png"></p><p>终端<code>cd</code>到<code>blog</code>文件夹下，打开<code>_config.yml</code>文件。或者用其他文本编辑器打开也可以。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure></p><p>打开后到文档最后部分，将<code>deploy</code>配置如下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repository: https://github.com/SnailMS/SnailMS.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure></p><p>其中将<code>repository</code>中<code>SnailMS</code>改为自己的用户名，注意type、<code>repository</code>、<code>branch</code>后均有空格。通过如下命令在<code>blog</code>下生成静态文件并上传到服务器。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p><p>若执行<code>hexo g</code>出错则执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo --save</span><br></pre></td></tr></table></figure></p><p>若执行<code>hexo d</code>出错则执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p><p>错误修正后再次执行<code>hexo g</code>和<code>hexo d</code>上传到服务器。<br>若未关联<code>GitHub</code>，执行<code>hexo d</code>时会提示输入<code>GitHu</code>b账号用户名和密码，即:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">username for &apos;https://github.com&apos;:</span><br><span class="line">password for &apos;https://github.com&apos;:</span><br></pre></td></tr></table></figure></p><p><code>hexo d</code>执行成功后便可通过<a href="https://SnailMS.github.io.git" target="_blank" rel="noopener">https://SnailMS.github.io.git</a>访问博客，看到的内容和<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>相同。</p><h4 id="4-2添加ssh-keys到GitHub"><a href="#4-2添加ssh-keys到GitHub" class="headerlink" title="4.2添加ssh keys到GitHub"></a>4.2添加ssh keys到GitHub</h4><p>添加<code>ssh key</code>后不需要每次更新博客再输入用户名和密码。首先检查本地是否包含<code>ssh key</code>。如果存在则直接将<code>ssh key</code>添加到<code>GitHub</code>之中，否则新生成ssh key。<br>执行下述命令生成新的<code>ssh key</code>，将<a href="mailto:`your_email@example.com" target="_blank" rel="noopener">`your_email@example.com</a><code>改成自己注册的GitHub邮箱地址。默认会在</code>~/.ssh/id_rsa.pub<code>中生成</code>id_rsa<code>和</code>id_rsa.pub`文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your_email@exampl&quot;</span><br></pre></td></tr></table></figure></p><p>Mac下利用<code>open ~/.ssh</code>打开文件夹，打开<code>id_rsa.pub</code>文件，里面的信息即为<code>ssh key</code>，将此信息复制到<code>GitHub</code>的<code>Add ssh key</code>路径<code>GitHub-&gt;Setting-&gt;SSH keys-&gt;add SSH key中</code>即可。<code>Title</code>里填写任意标题，将复制的内容粘贴到<code>key</code>中，点击<code>Add key</code>完成添加。<br>此时本地博客内容便已关联到<code>GitHub</code>之中，本地博客改变之后，通过<code>hexo g</code>和<code>hexo d</code>便可更新到<code>GitHub</code>之中，通过<a href="https://SnailMS.github.io.git" target="_blank" rel="noopener">https://SnailMS.github.io.git</a>访问便可看到更新内容。</p><h3 id="5-更换Hexo主题"><a href="#5-更换Hexo主题" class="headerlink" title="5.更换Hexo主题"></a>5.更换Hexo主题</h3><p>可以选择Hexo主题官网页面搜索喜欢的theme，这里我选择hexo-theme-next当作自己主题，hex-theme-next主题是GitHub中hexo主题star最高的项目，非常推荐使用。<br>终端cd到blog目录下执行如下所示命令。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></p><p>将blog目录下<code>_config.yml</code>里的theme的名称landscape更改为next。<br>执行如下命令（每次部署文章的步骤）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g  //生成缓存和静态文件</span><br><span class="line">hexo d  //重新部署到服务器</span><br></pre></td></tr></table></figure></p><p>当本地博客部署到服务器后，网页端无变化时可以采用下述命令。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  //清楚缓存文件(db.json)和已生成的静态文件(public)</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;博客本地环境搭建&quot;&gt;&lt;a href=&quot;#博客本地环境搭建&quot; class=&quot;headerlink&quot; title=&quot;博客本地环境搭建&quot;&gt;&lt;/a&gt;博客本地环境搭建&lt;/h1&gt;&lt;h3 id=&quot;1-安装Node-js和Git&quot;&gt;&lt;a href=&quot;#1-安装Node-js和Gi
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://snailms.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="hexo" scheme="https://snailms.github.io/tags/hexo/"/>
+    
+      <category term="blog" scheme="https://snailms.github.io/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Xcode工程文件打不开之cannot be opened because the project file cannot be parsed</title>
+    <link href="https://snailms.github.io/2019/04/17/Xcode%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6%E6%89%93%E4%B8%8D%E5%BC%80%E4%B9%8Bcannot%20be%20opened%20because%20the%20project%20file%20cannot%20be%20parsed/"/>
+    <id>https://snailms.github.io/2019/04/17/Xcode工程文件打不开之cannot be opened because the project file cannot be parsed/</id>
+    <published>2019-04-17T14:54:38.000Z</published>
+    <updated>2019-04-24T07:21:47.769Z</updated>
+    
+    <content type="html"><![CDATA[<p>当使用<code>svn</code>或<code>git</code>提交代码发生冲突时，xcode工程文件会出现打不开的情况。<br>出现这样的提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">XXX.xcode xcodeproj cannot be opened because the project file cannot be parsed。</span><br></pre></td></tr></table></figure></p><p>是因为<code>.xcodeproj</code>工程文件冲突了，然后还是会强制更新，内部文件出现了冲突，所以解析不了文件。<br>解决方法如下：</p><ol><li>右键点击<code>.xcodeproj</code>，选择显示包内容；</li><li>双击打开<code>project.pbxproj</code>文件；</li><li>找到类似如下的冲突信息（可用<code>command + f</code>搜索）</li><li>删除<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt;&lt; .mine</span><br><span class="line">=======</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; .r269</span><br></pre></td></tr></table></figure></li></ol><p>即剩下如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">9ADAAC6A15DCEF6A0019ACA8 .... in Resources */,</span><br><span class="line">52FD7F3D15DCEAEF009E9322 ... in Resources */,</span><br></pre></td></tr></table></figure></p><ol start="5"><li>保存文件，退出，再打开即可使用。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;当使用&lt;code&gt;svn&lt;/code&gt;或&lt;code&gt;git&lt;/code&gt;提交代码发生冲突时，xcode工程文件会出现打不开的情况。&lt;br&gt;出现这样的提示：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
+      
+    
+    </summary>
+    
+      <category term="bug修复" scheme="https://snailms.github.io/categories/bug%E4%BF%AE%E5%A4%8D/"/>
+    
+    
+      <category term="Xcode" scheme="https://snailms.github.io/tags/Xcode/"/>
+    
+      <category term="SVN" scheme="https://snailms.github.io/tags/SVN/"/>
+    
+      <category term="Git" scheme="https://snailms.github.io/tags/Git/"/>
+    
+  </entry>
+  
+</feed>
