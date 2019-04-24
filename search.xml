@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Mac-LaunchPad上有图标，但是应用程序中没有如何删除]]></title>
+    <url>%2F2019%2F04%2F23%2FMac-LaunchPad%E4%B8%8A%E6%9C%89%E5%9B%BE%E6%A0%87%EF%BC%8C%E4%BD%86%E6%98%AF%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%B2%A1%E6%9C%89%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4%2F</url>
+    <content type="text"><![CDATA[在launchpad界面：Mac如何删除launchpad里残留但是应用程序里没有的程序，可以参考以下几种方案基本上可以删除掉Mac launchPad中各种形式的应用 按住option键（或长按图标）出现抖动，如图标左上角有删除标识，点击就可以删除，如没有删除标识，请参考下面办法 Finder中找到Applications文件夹（默认左边快捷已提供），选中需要删除的应用，右键菜单中选择删除。如没有找到需要删除的应用，请参考下面办法。 呼出Spotlight（ctrl+space），搜索需要删除的应用名字，在结果最下面选择“在finder中显示”，在打开的finder列表中把应用拖到垃圾桶删除，注意删除目标在搜索结果中类型是“应用”。如没有找到需要删除的应用，请参考下面办法。 如果出现了 LaunchPad 的故障或者无法修复的问题, 就可以通过重建LaunchPad内的图标来解决。方法如下:打开应用程序-&gt;实用工具-&gt;终端。以此出入如下字符 12defaults write com.apple.dock ResetLaunchPad -bool truekillall Dock]]></content>
+      <categories>
+        <category>小技巧</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Mac安装Command Line Tools]]></title>
+    <url>%2F2019%2F04%2F21%2FMac%E5%AE%89%E8%A3%85Command-Line-Tools%2F</url>
+    <content type="text"><![CDATA[从App Store上下载的Xcode，默认是不会安装Command Line Tools的，Command Line Tools是在Xcode中的一款工具，可以在命令行中运行C程序。在终端中输入命令1xcode-select --install 会弹出提示框，安装选择同意协议 安装中 安装完成后，在终端中执行gcc -v命令查看是否安装成功。如果显示如下内容，则按照成功。12345Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/c++/4.2.1Apple LLVM version 10.0.1 (clang-1001.0.46.3)Target: x86_64-apple-darwin18.5.0Thread model: posixInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin 参考地址]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Xcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Mac+Hexo+GitHub博客搭建教程]]></title>
+    <url>%2F2019%2F04%2F21%2FMac-Hexo-GitHub%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[博客本地环境搭建1.安装Node.js和GitMac上安装可以选择图形化方式和终端安装，此处直接使用客户端方式安装。Node.js官网下载文件，根据提示安装即可，安装成功后在目录/usr/local/bin目录下。测试Node.js和npm，出现下述信息则安装成功。 1234node -vv8.10.0npm -v5.6.0 Git官网下载相应文件根据提示直接进行安装，检查git是否安装成功，直接查看git版本。 12Git --version git version 2.15.0 2.安装HexoNode.js和Git都安装成功后开始安装Hexo。安装时注意权限问题，加上sudo，其中-g表示全局安装。1sudo npm install -g hexo 3.博客初始化创建存储博客的文件，比如命名为blog，然后进入到blog之中。1cd blog 执行下述命令初始化本地博客，下载一系列文件。1hexo init 执行下述命令安装npm。1sudo npm install 执行下述命令生成本地网页文件并开启服务器，然后通过http://localhost:4000查看本地博客。12hexo ghexo s 4.本地博客关联GitHub4.1本地博客代码上传GitHub注册并登陆GitHub账号后，新建仓库，名称必须为user.github.io，如snailms.github.io。 终端cd到blog文件夹下，打开_config.yml文件。或者用其他文本编辑器打开也可以。1vim _config.yml 打开后到文档最后部分，将deploy配置如下。1234deploy:type: gitrepository: https://github.com/SnailMS/SnailMS.github.io.gitbranch: master 其中将repository中SnailMS改为自己的用户名，注意type、repository、branch后均有空格。通过如下命令在blog下生成静态文件并上传到服务器。12hexo ghexo d 若执行hexo g出错则执行1npm install hexo --save 若执行hexo d出错则执行1npm install hexo-deployer-git --save 错误修正后再次执行hexo g和hexo d上传到服务器。若未关联GitHub，执行hexo d时会提示输入GitHub账号用户名和密码，即:12username for &apos;https://github.com&apos;:password for &apos;https://github.com&apos;: hexo d执行成功后便可通过https://SnailMS.github.io.git访问博客，看到的内容和http://localhost:4000相同。 4.2添加ssh keys到GitHub添加ssh key后不需要每次更新博客再输入用户名和密码。首先检查本地是否包含ssh key。如果存在则直接将ssh key添加到GitHub之中，否则新生成ssh key。执行下述命令生成新的ssh key，将`your_email@example.com改成自己注册的GitHub邮箱地址。默认会在~/.ssh/id_rsa.pub中生成id_rsa和id_rsa.pub`文件。1ssh-keygen -t rsa -C &quot;your_email@exampl&quot; Mac下利用open ~/.ssh打开文件夹，打开id_rsa.pub文件，里面的信息即为ssh key，将此信息复制到GitHub的Add ssh key路径GitHub-&gt;Setting-&gt;SSH keys-&gt;add SSH key中即可。Title里填写任意标题，将复制的内容粘贴到key中，点击Add key完成添加。此时本地博客内容便已关联到GitHub之中，本地博客改变之后，通过hexo g和hexo d便可更新到GitHub之中，通过https://SnailMS.github.io.git访问便可看到更新内容。 5.更换Hexo主题可以选择Hexo主题官网页面搜索喜欢的theme，这里我选择hexo-theme-next当作自己主题，hex-theme-next主题是GitHub中hexo主题star最高的项目，非常推荐使用。终端cd到blog目录下执行如下所示命令。1git clone https://github.com/theme-next/hexo-theme-next themes/next 将blog目录下_config.yml里的theme的名称landscape更改为next。执行如下命令（每次部署文章的步骤）12hexo g //生成缓存和静态文件hexo d //重新部署到服务器 当本地博客部署到服务器后，网页端无变化时可以采用下述命令。1hexo clean //清楚缓存文件(db.json)和已生成的静态文件(public)]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Xcode工程文件打不开之cannot be opened because the project file cannot be parsed]]></title>
+    <url>%2F2019%2F04%2F17%2FXcode%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6%E6%89%93%E4%B8%8D%E5%BC%80%E4%B9%8Bcannot%20be%20opened%20because%20the%20project%20file%20cannot%20be%20parsed%2F</url>
+    <content type="text"><![CDATA[当使用svn或git提交代码发生冲突时，xcode工程文件会出现打不开的情况。出现这样的提示：1XXX.xcode xcodeproj cannot be opened because the project file cannot be parsed。 是因为.xcodeproj工程文件冲突了，然后还是会强制更新，内部文件出现了冲突，所以解析不了文件。解决方法如下： 右键点击.xcodeproj，选择显示包内容； 双击打开project.pbxproj文件； 找到类似如下的冲突信息（可用command + f搜索） 删除123&lt;&lt;&lt;&lt;&lt;&lt; .mine=======&gt;&gt;&gt;&gt;&gt;&gt;&gt; .r269 即剩下如下：129ADAAC6A15DCEF6A0019ACA8 .... in Resources */,52FD7F3D15DCEAEF009E9322 ... in Resources */, 保存文件，退出，再打开即可使用。]]></content>
+      <categories>
+        <category>bug修复</category>
+      </categories>
+      <tags>
+        <tag>Xcode</tag>
+        <tag>SVN</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+</search>
